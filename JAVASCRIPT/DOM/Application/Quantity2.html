@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop In Zomato</title>
+    
+    <style>
+        *{
+            margin: 0px;
+        }
+        nav>h1{
+            background:linear-gradient(45deg,rgb(240, 57, 57),rgb(247, 105, 105));
+            padding: 10px;
+        }
+        #card-section{
+           width: 240px;
+            height: 300px;
+           margin: 30px;
+           
+        }
+        #card-parent>#card>img{
+            width: 230px;
+            height: 200px;
+            box-shadow: 0px 0px 10px red;
+            
+            border-radius: 5px 5px 0px 0px;
+        }
+        .card-data{
+            text-align: center;
+            margin-top: 10px;
+        }
+        .fa-solid{
+          border-radius: 100%;
+        }
+        .fa-solid:hover{
+            cursor: pointer;
+        }
+        #minus{
+            color: red;
+        }
+        #plus{
+            color: green;
+        }
+    </style>
+<link rel="stylesheet" href="./../../../fontawsome/fa/css/all.css">
+
+
+</head>
+<body>
+    <nav>
+        <h1>Mani's Briyani</h1>
+    </nav>
+    <div id="card-section">
+        <div id="card-parent">
+            <div id="card">
+                <img src="https://i0.wp.com/stanzaliving.wpcomstaging.com/wp-content/uploads/2022/04/68b1e-bangalore-biryani.jpg?fit=1000%2C667&ssl=1" alt="">
+                <div class="card-data">
+                <h2>Mani's Dum Briyani</h2>
+                <p>The briyani comes with two pieces of chicken and gravy</p>
+                <h3 style="color: red; ">order now</h3>
+                <h3> &#8377; 349.00</h3>
+                <h2 style="margin-top: 10px;">
+                    <i class="fa-solid fa-circle-minus" id="minus" onclick="DecQty()"></i>
+                    <span id="qty-ele">1</span>
+                    <i class="fa-solid fa-circle-plus" id="plus" onclick="IncQty()"></i>
+                </h2>
+              </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        //localStorage.clear();
+        let qtyele=document.getElementById('qty-ele');
+        let qty=localStorage.getItem('qty')?localStorage.getItem('qty'):1;
+        qtyele.textContent=qty;
+        function IncQty(){
+            qty++;
+            localStorage.setItem('qty',qty);
+            qtyele.textContent=localStorage.getItem('qty');
+        }
+        function DecQty(){
+            if(qty>1){
+                qty--;
+            localStorage.setItem('qty',qty);
+            qtyele.textContent=localStorage.getItem('qty');
+            }
+            else qtyele.textContent=1;
+        }
+    </script>
+</body>
+</html>

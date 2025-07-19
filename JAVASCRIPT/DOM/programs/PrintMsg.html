@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+        }
+        div{
+            background-color: yellow;
+            color: red;
+            text-align: center;
+            padding: 20px;
+        }
+        div>button{
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 3px;
+        }
+        div>button:hover{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <h1 id="one">Print Message</h1>
+    <button onclick="printMsg()">Click Here</button>
+    </div>
+
+    <script>
+        function printMsg(){
+           // alert("Its working");
+           console.log("Its Working !")
+            let h1Tag=document.getElementById('one');
+            console.log(h1Tag.textContent);
+            h1Tag.textContent="I love Javascript";
+            console.log(h1Tag.textContent);
+        }
+    </script>
+</body>
+</html>

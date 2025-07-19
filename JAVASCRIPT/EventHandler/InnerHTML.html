@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="data"></div>
+
+    <!-- InnerHTML -->
+     <script>
+        let divTag=document.getElementById('data');
+        //divTag.innerText="<h1>Good Morning</h1>";
+        function printText(){
+           let str="<h1>Good Morning</h1>";
+           //console.log(str,typeof str);
+           divTag.innerHTML=str;
+        }
+        printText();
+     </script>
+</body>
+</html>

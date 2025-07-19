@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Spread Operator</h1>
+    <script>
+        let numbers=[1,2,3,4,5];
+        let val=Math.max(...numbers);
+        console.log(val);
+
+        //merge multiple objects(arrays)
+
+        let num1=[1,2,3];
+        let num2=[4,5,6];
+        let nums1=[];
+        for(let val of num1){
+            nums1.push(val);
+        }
+        for(let val of num2){
+            nums1.push(val);
+        }
+        console.log(nums1);
+
+        let nums2=[...num1,...num2];
+        console.log(nums2);
+
+        //merge obj
+
+        let obj1={id:1,sname:"kiran",age:23,address: { city: "Bangalore" } };
+        let obj2={...obj1,age:25};
+        console.log(obj1,obj2);
+        obj2.address.city = "Mysore";
+         obj2.age=35;
+         console.log(obj1.address.city);
+         console.log(obj1,obj2);
+    </script>
+</body>
+</html>

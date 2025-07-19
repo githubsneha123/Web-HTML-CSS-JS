@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart</title>
+    <link rel="stylesheet" href="./../bootstrap/bt/css/bootstrap.css">
+    <link rel="stylesheet" href="./../fontawsome/fa/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"> 
+</head>
+<style>
+    .bg-danger,.card-footer,.card-header
+        {
+            background: linear-gradient(45deg,rgb(160, 171, 171),rgb(89, 234, 219));
+        }
+     img{
+        width:100% !important;
+        height:220px!important;
+    }
+</style>
+<body>
+    <nav class="navbar navbar-dark bg-danger">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand" id="home-btn">🛒 SKK cart</a>
+            <!-- search bar -->
+            <div> <form class="d-flex mx-auto">
+                    <input class="form-control me-2" type="Search" type="text" placeholder="Search Here" id="search-box"/>
+                 </form>
+            </div>
+            <div>
+                <button class="btn btn-light" id="audio-btn">Audio🔉</button>
+                <button class="btn btn-light" id="gaming-btn">Gaming🎮</button>
+            </div>
+        </div>
+    </nav>
+     <section class="container-fluid mt-3">
+        <div class="row" id="data-ele"></div>
+    </section>
+<footer style="margin-bottom:500px;"></footer>
+
+    <!--script code-->
+<script src="./ProductsArray3.js"></script>
+</body>
+</html>

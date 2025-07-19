@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Loops in js</h1>
+    <script>
+        let num=[1,2,3,4,5];
+        // print in single line
+        let str="";
+        for(let index=0;index<num.length;index++){
+            if(num[index]%2==0)
+              str+=num[index]+" ";
+        }
+        console.log(str);
+
+        console.log("-------for in loop---------");
+        num=[1,2,3,4];
+        for(let index in num){
+            //console.log(index);
+            if(num[index]%2==0)
+               console.log(num[index]);
+        }
+
+        console.log("-------for of loop---------");
+        num=[1,2,3,4];
+        for(let val of num){
+            if(val%2==0)
+              console.log(val);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Array Methods</h1>
+    <script>
+        let numbers=[1,2,3,4,5];
+        console.log(numbers);
+        
+        //push()
+        numbers.push(6);
+        console.log(numbers);
+        //pop()
+        numbers.pop();
+        console.log(numbers);
+
+        //unshift()
+        numbers.unshift(3);
+        console.log(numbers);
+
+        //shift()
+        numbers.shift();
+        console.log(numbers);
+
+        //slice()
+        let val=numbers.slice(2);
+        console.log(val);
+        console.log(numbers);
+
+        console.log("--------------------");
+
+        //splice()
+        let val1=numbers.splice(2,2,6,7);
+        console.log(val1);
+        console.log(numbers);
+
+        numbers=[1,2,3,4,5];
+        val2=numbers.splice(2);
+        console.log(val2);
+        console.log(numbers);
+
+
+        console.log("--------------------");
+
+        //forEach()
+        numbers=[1,2,3,4,5];
+        console.log(numbers);
+        numbers.forEach(test);
+        function test(val,index,array){
+            console.log(`${val} ==> ${index}`);
+            //console.log(array);
+        }
+
+        console.log("--------------------");
+
+        //map()
+         numbers=[1,2,3,4,5];
+        console.log(numbers);
+        let retVal=numbers.map(test1);
+        console.log(retVal);
+        function test1(val,index,array){
+            console.log(`${val} ==> ${index}`);
+            //console.log(array);
+            return val*2;
+        }
+
+        console.log("--------------------");
+
+        //filter()
+        numbers=[1,2,3,4,5,6];
+        let evenNumbers=numbers.filter(function(val,index,arr){
+            return val%2==0;
+        });
+        console.log(evenNumbers);
+
+        console.log("--------------------");
+
+        //find()
+        numbers=[1,2,3,4,5,6];
+        let firstMatchedEle=numbers.find(function(val,i,arr){
+            return val%2==0;
+        });
+        console.log(firstMatchedEle);
+
+        console.log("--------------------");
+
+        //reduce()
+        numbers=[1,2,3,4,5,6];
+        let Val=numbers.reduce(function(acc,val,index,arr){
+            return acc+val;
+        },0);
+        console.log("Sum ="+Val);
+    </script>
+</body>
+</html>

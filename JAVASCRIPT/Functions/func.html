@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //function declaration
+        main();
+        function main(){
+            console.log("main starts");
+            console.log("main ends");
+        }
+        main();
+       console.log(main);
+
+       //function expression
+
+       //func1();-error
+       let func1=function(){
+           console.log("m1 starts");
+            console.log("m1 ends");
+       };
+       console.log(func1);
+       func1();
+
+       //arrow functions
+       //m2();-error
+       let m2=()=>{
+            console.log("m2 starts");
+            console.log("m2 ends");
+       }
+       m2();
+       console.log(m2);
+
+       //IIFE(Immediately Invoked Function Expression)
+       (function()
+    {
+        console.log("hello");
+    })();//can't reuse
+
+    
+    </script>
+</head>
+<body>
+   <h1>JS Functions</h1> 
+</body>
+</html>

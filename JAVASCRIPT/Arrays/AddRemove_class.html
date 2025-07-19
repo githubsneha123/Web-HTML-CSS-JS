@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg-yellow{
+            background-color: yellow;
+        }
+        .text-danger{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Add/Remove a new class in Existing class</h1>
+    <div>
+        <p class="bg-yellow">
+            This is DOM
+        </p>
+    </div>
+    <script>
+        let paraTag=document.querySelector('p');
+        paraTag.classList.add("text-danger");
+        paraTag.classList.remove("bg-yellow");
+        console.log(paraTag.classList.contains('bg-yellow'));
+         console.log(paraTag.classList.contains('text-danger'));
+    </script>
+</body>
+</html>

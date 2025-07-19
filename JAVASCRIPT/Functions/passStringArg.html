@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function sum(a,b){
+            return a+b;
+        }
+        function mul(a,b){
+            return a*b;
+        }
+        function calc(type){
+            let n1=5;
+            let n2=4;
+            if(type=="add") return sum(n1,n2);
+            else if(type=="mul") return mul(n1,n2);
+        }
+        let res=calc("add");
+        console.log("res = "+res);
+        res=calc("mul");
+        console.log("res = "+res);
+
+    </script>
+</head>
+<body>
+    <h1>passing string as argument</h1>
+</body>
+</html>

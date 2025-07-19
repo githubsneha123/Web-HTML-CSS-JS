@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jspiders</title>
+</head>
+<body>
+    <button onclick="home()">Home</button>
+    <button id="course-btn">Course</button>
+    <button id="about-btn">About</button>
+
+    <script>
+        //Inline EventHandler
+        function home(){
+            document.title="Home page";
+        }
+
+        //By using event properties
+        let courseBtn=document.querySelector('#course-btn');
+        courseBtn.onclick=function(){
+            document.title="Course Page";
+        }
+
+        //By using addEventListener() method
+        let aboutBtn=document.querySelector("#about-btn");
+        aboutBtn.addEventListener('dblclick',function(){
+            document.title="About Page";
+        });
+    </script>
+</body>
+</html>

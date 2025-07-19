@@ -1,0 +1,43 @@
+<!-- combinator selector -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #header>h1>span{
+            color: blueviolet;
+        }
+        #footer span{
+            color: aqua;
+        }
+        #footer h1~h3
+        {
+            color: blue;
+        }
+        #main h1+h2{
+            color: cadetblue;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>Header One <span>Hello</span>
+        </h1>
+        <h2>Header Two</h2>
+        <h3>Header Three</h3>
+    </div>
+    <div id="main">
+        <h1>Header One <span>Hello</span> </h1>
+        <h2>Header Two</h2>
+        <h3>Header Three</h3>
+    </div>
+    <div id="footer">
+        <h1>Header One <span>Hello</span>
+        </h1>
+        <h2>Header Two</h2>
+        <h3>Header Three</h3>
+    </div>
+</body>
+</html>

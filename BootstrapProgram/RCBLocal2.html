@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rcb</title>
+    <link rel="stylesheet" href="./../bootstrap/bt/css/bootstrap.css">
+    <link rel="stylesheet" href="./../fontawsome/fa/css/all.css">
+    <style>
+        .bg-danger,.card-footer
+        {
+            background: linear-gradient(45deg,darkslategrey,red);
+        }
+        .img{
+            width: 100% !important;
+            height: 200px !important;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-danger ">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand">🏆 R C B 🏆</a>
+        </div>
+    </nav>
+    <section class="container-fluid mt-3">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <div class="header">
+                        <img src="https://img.etimg.com/thumb/width-1600,height-900,imgsize-150160,resizemode-75,msid-121464075/news/sports/virat-kohli-invests-in-world-bowling-league-kohlis-new-pitch-isnt-cricket-but-he-is-interested-in-bowling-check-whats-his-new-bet.jpg" alt="" class="img-fluid">
+                    </div>
+                    <div class="card-body text-center">
+                         <h3 class="text-danger">Virat Kohli</h3>
+                         <h3>18</h3>
+                         <button class="btn btn-danger" id="dislikes-btn"><i class="fa-solid fa-thumbs-down"></i>
+                        <span id="dislikes"></span></button>
+                         <button class="btn btn-success" id="likes-btn"><i class="fa-solid fa-thumbs-up"></i>
+                        <span id="likes"></span></button>
+                    </div>
+                    <div class="card-footer text-white">
+                        <h4>Likes & Dislikes: <span id="total"></span></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="margin-bottom: 500px;"></footer>
+
+    <!-- script tag -->
+     <script src="./RCBLocal2.js"> </script>
+</body>
+</html>

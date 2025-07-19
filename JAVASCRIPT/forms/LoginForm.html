@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart</title>
+    <link rel="stylesheet" href="./../../bootstrap/bt/css/bootstrap.css">
+    <link rel="stylesheet" href="./../../fontawsome/fa/css/all.css">
+    
+    <style>
+        .bg-danger,.card-footer,.card-header,.btn-info
+        {
+            background: linear-gradient(45deg,rgb(160, 171, 171),rgb(89, 234, 219));
+        }
+        .img{
+            width: 100% !important;
+            height: 200px !important;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-danger ">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand">SKK Cart</a>
+        </div>
+    </nav>
+    <section class="container-fluid mt-4">
+        <div class="row" >
+            <div class=" col-4 m-auto">
+                <div class="card">
+                    <div class="card-header text-center text-white">
+                        <h2>LogIn Here</h2>
+                    </div>
+                    <div class="card-body">
+                        <form id="login-form">
+                            <div><input type="text"  placeholder="Enter Usn/Email" class="form-control" id="usn-box" value=""></div>
+                            <div class="mt-3"><input type="password" class="form-control" id="pwd-box" placeholder="Enter Password" value=""></div>
+                            <div class="mt-3"><input type="submit" class="btn btn-info" ></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+    </section>
+
+    <footer style="margin-bottom: 500px;"></footer>
+
+    <!-- script tag -->
+     <script>
+        let loginForm=document.getElementById('login-form');
+        let usernameBox=document.getElementById('usn-box');
+        let passwordBox=document.getElementById('pwd-box');
+
+        loginForm.addEventListener('submit',function(e){
+            e.preventDefault();
+            //console.log(e);//object-event
+            let enteredUsn=usernameBox.value;
+            let enteredPw=passwordBox.value;
+
+            let newUser={};
+            newUser.usn=enteredUsn;
+            newUser.pwd=enteredPw;
+            console.log(newUser);
+            usernameBox.value="";
+            passwordBox.value="";
+        });
+        
+     </script>
+
+    
+</body>
+</html>

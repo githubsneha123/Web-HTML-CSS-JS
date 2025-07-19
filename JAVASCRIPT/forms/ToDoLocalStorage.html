@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todolist</title>
+    <link rel="stylesheet" href="./../../bootstrap/bt/css/bootstrap.css">
+    <link rel="stylesheet" href="./../../fontawsome/fa/css/all.css">
+    <style>
+        .bg-danger,.card-footer,.card-header,.btn-info
+        {
+            background: linear-gradient(45deg,rgb(160, 171, 171),rgb(89, 234, 219));
+        }
+        .img{
+            width: 100% !important;
+            height: 200px !important;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-danger ">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand">SKK Cart</a>
+        </div>
+    </nav>
+    <section class="container-fluid mt-4">
+        <div class="row" >
+            <div class=" col-6 m-auto">
+                <div class="card">
+                    <div class="card-header text-center text-white">
+                        <h2>ToDo List</h2>
+                    </div>
+                    <div class="card-body">
+                        <form id="list-form">
+                            <div><input type="text"  placeholder="Enter Task" class="form-control" id="task-box" value="" ></div>
+                            <div class="mt-3"><input type="submit" class="btn btn-info" value="Add Task" ></div>
+                        </form>
+                    </div>                    
+                </div>
+            </div>
+
+        </div>
+        
+    </section>
+
+    <section class="container-fluid mt-4">
+        <div class="row" >
+            <div class=" col-6 m-auto">
+                <div class="card p-2" id="list-ele">
+                       
+                    <ol class="list-group">
+                        <li class="list-group-item list-group-item-info">
+                            <span class="fw-bolder">React</span>
+                                <button class="float-end btn-info text-white"><i class="fa-solid fa-trash"></i></button>
+                                <button class="float-end btn-info text-white me-2"><i class="fa-solid fa-pen"></i></button>
+                        </li>
+                    </ol>                            
+                                     
+                </div>
+            </div>
+
+        </div>
+        
+    </section>
+
+    <footer style="margin-bottom: 500px;"></footer>
+
+    <!-- script tag -->
+     <script src="./ToDoLocalStorage.js"> </script>
+
+    
+</body>
+</html>
+

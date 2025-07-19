@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Store non primitive data in web storage</h1>
+    <script>
+        let arr=[{id:1,ename:"kiran"},{id:2,ename:"naresh"}];
+        localStorage.setItem('emps',JSON.stringify(arr));
+        let getData=JSON.parse(localStorage.getItem('emps'));
+        console.log(getData,typeof getData);
+    </script>
+</body>
+</html>

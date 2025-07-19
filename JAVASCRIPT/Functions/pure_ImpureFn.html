@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //pure function
+        let add=0;
+        function sum(a,b){
+            return a+b;
+        }
+        let res=sum(5,2);
+        console.log("res = "+res);
+         res=sum(5,2);
+        console.log("res = "+res);
+
+        //Impure function
+        let total=0;
+        function addition(num){
+            total+=num;
+        }
+        addition(5);
+        console.log("total = "+total);
+        addition(5);
+        console.log("total = "+total);
+    </script>
+</head>
+<body>
+    <h1>Pure function and Impure function</h1>
+</body>
+</html>

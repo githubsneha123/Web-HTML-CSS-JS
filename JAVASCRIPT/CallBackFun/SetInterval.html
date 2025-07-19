@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./../../bootstrap/bt/css/bootstrap.css">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark ">
+       <div class="container-fluid">
+          <a class="navbar-brand" href="#">Timer</a>
+       </div>
+    </nav>
+
+    <section class="container-fluid mt-3">
+        <div class="row" id="data-ele">
+            <div class="col-md-4 m-auto ">
+                     <div class="card">
+                        <div class="card-body bg-dark text-white text-center">
+                            <h2 id="time-el">Time</h2>
+                        </div>
+                    </div>
+            </div>
+        </div>
+ 
+    </section>
+
+    <script>
+        let timeEle=document.getElementById('time-el');
+        function timer(){
+            let d1=new Date();
+            let currTime=d1.toLocaleTimeString();
+            timeEle.textContent=currTime;
+        }
+        //timer();
+        window.setInterval(timer,1000);
+    </script>
+</body>
+</html>

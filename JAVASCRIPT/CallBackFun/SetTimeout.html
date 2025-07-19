@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>call back hell-timer function</h1>
+    <script>
+        setTimeout(function(){
+            console.log("hii");
+            setTimeout(function(){
+                console.log("hello");
+                setTimeout(function(){
+                    console.log("bye");
+                },3000)
+            },2000)
+        },1000)
+    </script>
+</body>
+</html>

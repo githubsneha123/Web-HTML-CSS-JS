@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div
+        {
+            
+            padding: 10px;
+            text-align: center;
+            color: white;
+           
+            
+
+        }
+        #great-grand-parent
+        {
+            background: linear-gradient(45deg,green,rgb(144, 30, 206),orange);
+            width: 500px;
+            height: 400px;
+            /* position: relative; */
+           
+        }
+        #grand-parent
+        {
+            background: linear-gradient(45deg,green,cyan,rgb(216, 55, 27));
+            width: 400px;
+            height: 300px;
+            /* position: relative; */
+           
+        }
+        #parent
+        {
+            background: linear-gradient(45deg,green,rgb(206, 48, 175),orange);
+            width: 300px;
+            height: 200px;
+            /* position: relative; */
+           
+        }
+        #child
+        {
+            background: linear-gradient(45deg,rgb(199, 205, 28),rgb(19, 58, 187),orange);
+            width: 200px;
+            height: 100px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+           
+        }
+    </style>
+</head>
+<body>
+    <div id="great-grand-parent">
+        <div id="grand-parent">
+            <div id="parent">
+                <div id="child"><p>Static Position</p></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

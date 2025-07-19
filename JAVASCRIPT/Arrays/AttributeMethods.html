@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg-dark{
+            background-color: black;
+        }
+        .text-white{
+            color: white;
+        }
+        #one{
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Attribute Methods</h1>
+    <div>
+        <p class="bg-dark text-white">
+            This is DOM
+        </p>
+    </div>
+    <script>
+        let paraTag=document.querySelector('p');
+        console.log(paraTag.hasAttribute('class'));
+        console.log(paraTag.hasAttribute('id'));
+        paraTag.setAttribute('id','one');
+        console.log(paraTag.getAttribute('id'));
+        console.log(paraTag.getAttribute('class'));
+        paraTag.removeAttribute('class');
+    </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+"arrayOfProducts":[{"id":1,"title":"Microsoft Xbox X/S Wireless Controller Robot White",
+    "imgURL":"https://storage.googleapis.com/fir-auth-1c3bc.appspot.com/1692255251854-xbox.jpg",
+    "price":1000,"brand":"Microsoft","category":"Gaming","qty":1},
+    {"id":2,"title":"Logitech G733 Lightspeed Wireless Gaming Headset with Suspension Headband, LIGHTSYNC RGB, Blue VO!CE mic Technology and PRO-G Audio Drivers - White",
+    "imgURL":"https://storage.googleapis.com/fir-auth-1c3bc.appspot.com/1692257709689-logitech heaphone.jpg",
+    "price":2000,"brand":"logitech","category":"Gaming","qty":1},
+    {"id":3,"title":"Sony WH-1000XM5 Wireless Industry Leading Active Noise Cancelling Headphones, 8 Mics for Clear Calling, 30Hr Battery, 3 Min Quick Charge = 3 Hours Playback, Multi Point Connectivity, Alexa-Silver",
+    "imgURL":"https://storage.googleapis.com/fir-auth-1c3bc.appspot.com/1692941008275-headphone3.jpg",
+    "price":3000,"brand":"Sony","category":"Audio","qty":1},
+    {"id":4,"title":"Microsoft Xbox X/S Wireless Controller Robot White",
+    "imgURL":"https://storage.googleapis.com/fir-auth-1c3bc.appspot.com/1692255251854-xbox.jpg",
+    "price":4000,"brand":"Urbanista","category":"Audio","qty":1}]
+}
