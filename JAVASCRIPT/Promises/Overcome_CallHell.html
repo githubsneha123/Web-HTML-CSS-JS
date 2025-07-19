@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Js Promises</h1>
+
+<!-- Script Code -->
+ <script>
+    function getInfo()
+    {
+        fetch("https://restcountries.com/v3.1/name/bharat").then((response)=>
+        {
+            return response.json();
+        }).then((data)=>
+        {
+            console.log(data[0]);
+
+            return fetch("https://restcountries.com/v3.1/name/usa");
+
+        }).then((response)=>
+       {
+            return response.json();
+       }).then((data)=>
+        {
+            console.log(data[0]);
+        })
+    }
+    getInfo();
+ </script>
+</body>
+</html>

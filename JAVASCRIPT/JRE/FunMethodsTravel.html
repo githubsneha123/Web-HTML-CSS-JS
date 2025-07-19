@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let t1={travelsId:101,travelsName:"orange",seats:40};
+        let t2={travelsId:102,travelsName:"VRL",seats:50};
+        function book(pName,seatNo){
+            console.log(`hii,${pName} your seat is confirmed with ${this.travelsName} travels,with seat number ${seatNo}`);
+        }
+        book();
+        
+        console.log("--------------call()-------------");
+        book.call(t1,"sneha",23);
+        book.call(t2,"kani",26);
+        console.log("--------------apply()-------------");
+        book.apply(t2,["sneha",45]);
+        book.apply(t1,["kavin",46]);
+        console.log("--------------bind()-------------");
+       let ret1=book.bind(t1,"ramesh",12);
+       ret1();
+       let ret2=book.bind(t2,"rasu");
+       ret2(34);
+       let ret3=book.bind(t2);
+       ret3("jani",36);
+    </script>
+</head>
+<body>
+    <h1>function methods</h1>
+</body>
+</html>

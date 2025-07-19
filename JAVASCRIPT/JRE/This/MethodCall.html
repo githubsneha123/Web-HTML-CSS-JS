@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       let s1={
+        sid:101,
+        sname:"naresh",
+        birthYear:2002,
+        calcAge:function(){
+           let d1=new Date();
+           let currYear=d1.getFullYear();
+           let age=currYear-this.birthYear;
+            console.log(`${this.sname} age is ${age}`);
+        }
+       }
+       console.log(s1);
+       s1.calcAge();
+
+    </script>
+</head>
+<body>
+    <h1>this keyword in method call </h1>
+</body>
+</html>

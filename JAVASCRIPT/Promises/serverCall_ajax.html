@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>local server call-ajax</h1>
+    <script>
+        let p1=new Promise((reslove,reject)=>{
+           let xhr= new XMLHttpRequest();
+           xhr.open('GET',"./data.txt",true);
+           xhr.send();
+           xhr.addEventListener('load',function(){
+            //console.log(xhr);
+            if(xhr.statusText=="OK"){
+                reslove(xhr.responseText);
+            }
+            else
+               reject("server not found");
+           })
+        })
+        p1.then((data)=>{console.log(data)}).catch((err)=>{console.log(err)});
+    </script>
+</body>
+</html>

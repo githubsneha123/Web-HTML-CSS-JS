@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #gp{
+            width: 700px;
+            height: 700px;
+            background-color: red;
+            position: relative;
+        }
+        #p{
+             width: 450px;
+            height: 450px;
+            background-color: yellow;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+        #c{
+             width: 250px;
+            height: 250px;
+            background-color: green;
+             position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="gp">
+        <div id="p">
+            <div id="c">
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let gp=document.getElementById('gp');
+        let p=document.getElementById('p');
+        let c=document.getElementById('c');
+
+        gp.addEventListener('click',()=>{
+            console.log('red');
+        },true)
+        p.addEventListener('click',(e)=>{
+           // e.stopPropagation();
+            console.log('yellow');
+        },true)
+          c.addEventListener('click',(e)=>{
+            //e.stopPropagation();
+            console.log('green');
+        },true)
+    </script>
+</body>
+</html>

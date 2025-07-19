@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let s1={
+            sid:101,
+        sname:"naresh",
+        birthYear:2002,
+        }
+        let s2={
+            sid:102,
+        sname:"kiran",
+        birthYear:2000,
+        }
+        let calcAge=function(){
+            let currYear=new Date().getFullYear();
+            let age=currYear-this.birthYear;
+            console.log("age = "+age);
+        };
+        calcAge();
+        console.log("--------------call()-------------");
+        calcAge.call(s1);
+        calcAge.call(s2);
+        console.log("--------------apply()-------------");
+        calcAge.apply(s1);
+         calcAge.apply(s2);
+        console.log("--------------bind()-------------");
+       let ret1= calcAge.bind(s1);
+       ret1();
+       ret1();
+       let ret2= calcAge.bind(s2);
+        ret2();
+    </script>
+</head>
+<body>
+    <h1>function methods</h1>
+</body>
+</html>

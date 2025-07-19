@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>promises</h1>
+    <script>
+        //producing code
+        let p1=new Promise((resolve,reject)=>{
+            let gerData=true;
+            if(gerData)
+               resolve([{id:101,ename:"kiran"},{id:102,ename:"naresh"}]);
+            else
+               reject("something went wrong");
+        });
+        console.log(p1);
+        //consuming code
+        p1.then((data)=>{
+            //console.log(data);
+            for(let emp of data){
+                console.log(emp.ename);
+            }
+        });
+        p1.catch((err)=>{
+            console.log(err);
+        });
+    </script>
+</body>
+</html>

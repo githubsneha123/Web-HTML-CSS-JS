@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function main(){
+           let a=5,b=6;
+           console.log(a,b);
+           console.log(a>b);
+           console.log(a<b);
+           console.log(a>b&&a<b);
+           console.log(a>b||a<b);
+           console.log(!a>5);
+           console.log(!(a>5));
+           console.log("10">5);
+           console.log("10">13);
+           console.log("10"<"12");
+           console.log("ab">5);
+           //------------
+           a=5,b=6;
+           console.log(a++>5 && b++>5);
+           console.log(a,b);
+           a=5,b=6;
+           console.log(a++>=5 && b++>5);
+           console.log(a,b);
+           a=5,b=6;
+           console.log(a++>5 || b++>5);
+           console.log(a,b);
+           a=5,b=6;
+           console.log(a++>=5 || b++>5);
+           console.log(a,b);
+           a=5,b=6;
+           console.log(a>!5);
+           console.log(!0>!5);
+           //------------------//
+           console.log(1&&1);
+           console.log(1&&0);
+           console.log(0&&1);
+           console.log(1||0);
+           console.log(0||1);
+           console.log(0||0);
+           console.log("hii"||123);
+           console.log("hii"&&123);
+           console.log(NaN||123);
+           console.log(NaN&&123);
+           console.log("hii"||NaN ||123);
+           console.log("hii"||NaN &&123);
+           console.log("hii"&&NaN ||123);
+           console.log("hii"&&NaN &&123);
+
+
+
+        }
+        main();
+    </script>
+</head>
+<body>
+    <h1>Logical Operators</h1>
+</body>
+</html>

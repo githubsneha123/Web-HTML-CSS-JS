@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Promises-Async/Await</h1>
+    <script>
+        console.log("hii");
+        async function getInfo1() {
+            let response=await fetch("https://restcountries.com/v3.1/name/bharat");
+            //console.log(response);
+            let data=await response.json();
+            console.log(data[0]);            
+        }
+        let p1=getInfo1();
+        console.log(p1);
+        console.log("hello");
+    </script>
+</body>
+</html>

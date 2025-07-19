@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        main();
+        function main(){
+            console.log("main starts")
+            let res=m1();
+            console.log(res);
+            console.log("main ends")
+        }
+        function m1(){
+           let a=20;
+           let b=10;
+           let sum=a+b;
+           let mul=sum*2;
+           return sum;
+           return mul;//unreachable stmt
+        }
+    </script>
+</head>
+<body>
+    <h1>JS Unreachable stmt</h1>
+</body>
+</html>

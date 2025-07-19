@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function call(unit){
+           let amount=0;
+           if(unit<=200){
+            amount=0;
+           }
+           else if(unit<=250){
+            amount=(unit-200)*3;
+           }
+           else if(unit<=300){
+           amount=(50*3)+(unit-250)*5;
+           }
+           else if(unit >300){
+
+            amount=(50*3)+(50*5)+(unit-300)*7;
+           }
+           
+           console.log("Electricity Bill Amt for "+unit+" units is "+amount);
+        }
+        function main(){
+           let unit=prompt("enter units");
+           let input=Number(unit);
+           call(input);
+           
+        }
+        
+        main();
+    </script>
+</head>
+<body>
+    <h1>Electricity Bill</h1>
+</body>
+</html>
