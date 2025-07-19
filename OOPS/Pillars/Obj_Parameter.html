@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Object parameter</h1>
+    <script>
+        class Bike{
+            color=null;
+            constructor(clr){
+                this.color=clr;
+            }
+            getColor(){
+                return this.color;
+            }
+        }
+        class Test2{
+            static m1(c){
+                console.log("m1 starts");
+                c.color="red";
+                console.log("m1 ends");
+            }
+            static main(){
+                console.log("main starts");
+                let b1=new Bike("black");
+                console.log(b1.getColor());
+                Test2.m1(b1);
+                console.log(b1.getColor());
+                console.log("main ends");
+            }
+        }
+        Test2.main();
+    </script>
+</body>
+</html>

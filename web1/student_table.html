@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+            crossorigin="anonymous" />
+
+        <title>Document</title>
+        <style>
+        .bg-dark,.btn-dark{
+            background: linear-gradient(45deg,purple,rgb(0, 221, 255));
+        }
+    </style>
+    </head>
+    <body>
+        <nav class="nav navbar-dark bg-dark p-3 fs-3">
+            <a href class="navbar-brand">Student portal</a>
+        </nav>
+        <section>
+            <h1>Student profile:-</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque beatae
+        voluptates, sequi blanditiis, voluptate minus facilis ipsa tempora,
+        tempore officiis velit. Voluptates dicta nobis iure exercitationem
+        animi, recusandae quisquam architecto.
+            </p>
+        </section>
+        <section class="m-3">
+            <div class="row">
+                <div class="col-3">
+                    <button class="btn btn-dark" id="AllBtn">All Students</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-dark" id="maleBtn">Male Students</button>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-dark" id="femaleBtn">Female Students</button>
+                </div>
+                <div class="col-3">
+                    <div class="input-group mb-3">
+                        <input  id="search-Ele"   type="search" class="form-control"
+                            placeholder="Search Here" aria-label="Username"
+                            aria-describedby="basic-addon1">
+                            <span class="input-group-text" id="basic-addon1"><i class="bi bi-search"></i></span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section>
+            <table class="table">
+                <thead class="table-info text-center">
+                    <tr>
+                        <td>Sid</td>
+                        <td>Name</td>
+                        <td>Age</td>
+                        <td>Gender</td>
+                    </tr>
+                </thead>
+                <tbody id="displaydata" class="text-center">
+
+                </tbody>
+            </table>
+        </section>
+        <script>
+            let students=[
+                {id:101,name:"sneha",age:23,gender:"Female"},
+                {id:102,name:"kaniska",age:18,gender:"Female"},
+                {id:103,name:"kavin",age:18,gender:"Male"},
+                {id:104,name:"Sarawathi",age:43,gender:"Female"},
+                {id:105,name:"ramesh",age:49,gender:"Male"},
+                {id:106,name:"periyannan",age:68,gender:"Male"},
+                {id:107,name:"palaniyammal",age:65,gender:"Female"},
+                {id:108,name:"nachiyappan",age:62,gender:"Male"},
+            
+            ];
+
+
+
+            let displayData=document.getElementById("displaydata");
+            let AllBtn=document.getElementById("AllBtn");
+            let maleBtn=document.getElementById("maleBtn");
+            let femaleBtn=document.getElementById("femaleBtn");
+            let searchEle=document.getElementById("search-Ele");
+
+            searchEle.addEventListener('keyup',function(){
+                let val=searchEle.value;
+                Searching(val);
+            })
+
+
+
+            function Searching(val){
+                val=val.trim().toLowerCase();
+                let returnData=students.filter((student)=>{
+                    let name=student.name.trim().toLowerCase();
+                    if(name.startsWith(val)) return student;
+                });
+                displayStudents(returnData);
+
+            }
+
+
+            let maleStudents=students.filter((student)=>{
+            
+                if(student.gender.toLowerCase()=="male") return student;
+
+            });
+            let femaleStudents=students.filter((student)=>{
+                if(student.gender.toLowerCase()=="female") return student;
+            });
+
+            AllBtn.addEventListener('click',function(){
+                displayStudents(students);
+            });
+            maleBtn.addEventListener('click',function(){
+                displayStudents(maleStudents);
+            });
+             femaleBtn.addEventListener('click',function(){
+                displayStudents(femaleStudents);
+            });
+            
+
+
+             //displayStudents(students);
+            function displayStudents(arr){
+                let output=``;
+                arr.forEach((student)=>{
+                    output+=`<tr>
+                        <td>${student.id}</td>
+                        <td>${student.name}</td>
+                        <td>${student.age}</td>
+                        <td>${student.gender}</td>
+
+                    </tr>`;
+                });
+                displayData.innerHTML=output;
+            }
+            
+        </script>
+
+    </body>
+</html>

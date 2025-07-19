@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Inheritance between Multiple Function Constructor</h1>
+    <script>
+        function Person(id,name,birthYear){
+                this.id=id;
+                this.name=name;
+                this.birthYear=birthYear;
+        }
+        function Employee(eid,ename,birthYear,desg,sal){
+            Person.call(this,eid,ename,birthYear);
+                this.desg=desg;
+                this.sal=sal;
+        }
+        let e1=new Employee(101,"naresh",1999,"dev",20000);
+                console.log(e1);
+    </script>
+</body>
+</html>

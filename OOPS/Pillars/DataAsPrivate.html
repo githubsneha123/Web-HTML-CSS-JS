@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Making data member,property as private by using #</h1>
+    <script>
+        class Student{
+            #sname="kiran";
+            #sage=21;
+            setSname(sname){
+                this.#sname=sname;
+            }
+            getSname(){
+                return this.#sname;
+            }
+        }
+        class Test1{
+            static main(){
+                let s1=new Student();
+                console.log(s1.sname);
+                console.log(s1.getSname());
+            }
+        }
+        Test1.main();
+    </script>
+</body>
+</html>

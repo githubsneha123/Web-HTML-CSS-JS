@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Multiplication Table</title>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+    crossorigin="anonymous" />
+  <style>
+    .bg-dark,
+    .btn-dark {
+      background: linear-gradient(45deg, purple, rgb(0, 221, 255));
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav navbar-dark bg-dark p-3 fs-3">
+    <a href="#" class="navbar-brand">Multiplication Table</a>
+  </nav>
+
+  <section class="m-4">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div class="input-group mb-3">
+          <input
+            id="search-Ele"
+            type="number"
+            class="form-control"
+            placeholder="Enter a number"
+            aria-label="Search"
+            aria-describedby="search-icon" />
+          <span class="input-group-text" id="search-icon">
+            <i class="bi bi-search"></i>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="m-4">
+    <table class="table text-center">
+      <thead class="table-info">
+        <tr>
+          <th>Expression</th>
+          <th>Result</th>
+        </tr>
+      </thead>
+      <tbody id="displaydata"></tbody>
+    </table>
+  </section>
+
+  <script>
+    let displayData = document.getElementById("displaydata");
+    let searchEle = document.getElementById("search-Ele");
+
+    searchEle.addEventListener("keyup", function () {
+      let val = parseInt(searchEle.value);
+      if (!isNaN(val)) {
+        generateTable(val);
+      } else {
+        displayData.innerHTML = ""; // Clear table if input is not valid
+      }
+    });
+
+    function generateTable(num) {
+      let output = "";
+      for (let i = 1; i <= 10; i++) {
+        output += `<tr>
+                    <td>${i} × ${num}</td>
+                    <td>${i * num}</td>
+                   </tr>`;
+      }
+      displayData.innerHTML = output;
+    }
+  </script>
+</body>
+</html>

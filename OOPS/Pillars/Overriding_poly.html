@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Overriding car</h1>
+    <script>
+        class Car{
+            start(){}
+            accelerates(){}
+            stop(){}
+        }
+        class BMW extends Car{
+            start(){console.log("Bmw starts");}
+            accelerates(){console.log("Bmw accelerates");}
+            stop(){console.log("Bmw stops");}
+        }
+        class BENZ extends Car{
+            start(){console.log("Benz starts");}
+            accelerates(){console.log("Benz accelerates");}
+            stop(){console.log("Benz stops");}
+        }
+        //user program
+        class Driver{
+            drive(c){  //passing obj as parameter
+                c.start();
+                c.accelerates();
+                c.stop();
+            }
+        }
+        class Test{
+            static main(){
+                let d=new Driver();
+                let bmw=new BMW();
+                d.drive(bmw);
+                d.drive(new BENZ());
+            }
+        }
+        Test.main();
+    </script>
+</body>
+</html>

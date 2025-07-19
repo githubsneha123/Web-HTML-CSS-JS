@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Student(sid,sname,birthYear){
+           
+            this.sid=sid;
+            this.sname=sname;
+            this.birthYear=birthYear;
+            this.calcAge=function(){
+                let age=2025-this.birthYear;
+                console.log("Age ="+age)
+            }
+        }
+        let s1=new Student(101,"kiran",2002);
+        console.log(s1);
+        s1.calcAge();
+
+        let s2=new Student(102,"naresh",1997);
+        console.log(s2);
+        s2.calcAge();
+
+        let e1={eid:101,ename:"jaha"}
+        console.log(s1 instanceof Student);
+        console.log(s2 instanceof Student);
+        console.log(e1 instanceof Student);
+    </script>
+</head>
+<body>
+    <h1>Function in object constructor</h1>
+</body>
+</html>

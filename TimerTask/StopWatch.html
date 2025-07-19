@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>country cart</title>
+    <link rel="stylesheet" href="./../../bootstrap/bt/css/bootstrap.css">
+    <link rel="stylesheet" href="./../../fontawsome/fa/css/all.css">
+    <style>
+       .bg.dark
+       {
+        background:linear-gradient(45deg,rgb(27, 28, 27),rgb(27, 25, 26))!important;
+       }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark ">
+       <div class="container-fluid">
+          <a class="navbar-brand" href="#">Stop Watch</a>
+       </div>
+    </nav>
+
+     <section class="container-fluid mt-3">
+        <div class="row" id="data-ele">
+            <div class="col-md-4 m-auto ">
+                     <div class="card">
+                        <div class="card-body  text-center">
+                            <h1>
+                                <span id="min-el">00</span>
+                                <span id="sec-el">00</span>
+                                <span id="m-sec-el">00</span>
+                            </h1>
+                            <div class="mt-2">
+                                <button class="btn btn-success" id="start-btn">Start</button>
+                                 <button class="btn btn-danger" id="stop-btn">Stop</button>
+                                  <button class="btn btn-warning" id="reset-btn">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div> 
+    </section>
+
+    <!-- script code -->
+     <script src="./StopWatch.js"></script>
+</body>
+</html>

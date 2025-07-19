@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Student(sid,sname,birthYear){
+           
+            this.sid=sid;
+            this.sname=sname;
+            this.birthYear=birthYear;
+        }
+        console.log(Student.prototype);
+        Student.prototype.calcAge=function(){
+                let age=2025-this.birthYear;
+                console.log("Age ="+age)
+            }
+        Student.prototype.city="bangalore";
+        console.log(Student.prototype);
+
+        let s1=new Student(101,"kiran",2002);
+        console.log(s1);
+        s1.calcAge();
+        console.log(s1.city);
+
+        let s2=new Student(102,"naresh",1997);
+        console.log(s2);
+        s2.calcAge();
+        console.log(s2.city);
+    
+    </script>
+</head>
+<body>
+    <h1>Prototypes</h1>
+</body>
+</html>

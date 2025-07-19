@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Overriding</h1>
+    <script>
+        class Trainer{
+            teaches(){
+                console.log("Trainer Teach subject");
+            }
+        }
+        class Raveesh extends Trainer{
+            teaches(){
+                console.log("Raveesh Trainer Teach java subject");
+            }
+        }
+        let r1=new Raveesh();
+        r1.teaches();
+    </script>
+</body>
+</html>
